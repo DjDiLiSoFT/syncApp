@@ -207,7 +207,7 @@ class syncAppMemberSync
                     'email'         =>  $member['email'],
                     'last_ip'       =>  $ip,
                     'locked'        =>  $locked,
-                    'expansion'     =>  intval(2)));
+                    'expansion'     =>  intval(4)));
 
                     /* Create id sync table */
                     $account_ID =   ipsRegistry::DB('auth_DB')->getInsertId();

@@ -382,7 +382,7 @@ class usercpForms_syncApp extends public_core_usercp_manualResolver implements i
                         'username'      =>  $username,
                         'sha_pass_hash' =>  $sha_NameAndPass,
                         'email'         =>  $this->memberData['email'],
-                        'expansion'     =>  intval(2)));
+                        'expansion'     =>  intval(4)));
 
                         /* Grab id from the above query */
                         $account_ID =   ipsRegistry::DB('realm_DB')->getInsertId();
