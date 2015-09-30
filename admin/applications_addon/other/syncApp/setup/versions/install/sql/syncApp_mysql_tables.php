@@ -16,18 +16,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-//$TABLE[] = "ALTER TABLE groups ADD syncapp_group_id TINYINT(1) NOT NULL DEFAULT '0';";
+
 $TABLE[] = "ALTER TABLE groups ADD syncapp_realm_id TINYINT(1) NOT NULL DEFAULT '-1';";
 $TABLE[] = "ALTER TABLE groups ADD syncapp_group_permission_levels TINYINT(1) NOT NULL DEFAULT '0';";
+$TABLE[] = "CREATE TABLE `syncapp_members` (`forum_id` INT(100) NOT NULL, `account_id` INT(100) NOT NULL, `deleted` TINYINT(10) NOT NULL DEFAULT '0', PRIMARY KEY (`forum_id`)) DEFAULT CHARSET='utf8' ENGINE='InnoDB';";
 
-$TABLE[] = "CREATE TABLE `syncapp_members` (
-	`forum_id` INT(100) NOT NULL,
-	`account_id` INT(100) NOT NULL,
-	`deleted` TINYINT(10) NOT NULL DEFAULT '0',
-	PRIMARY KEY (`forum_id`)
-)
-COLLATE='utf8_general_ci'
-ENGINE=InnoDB
-;";
 ?>
 
